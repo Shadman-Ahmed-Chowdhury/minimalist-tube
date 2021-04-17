@@ -1,0 +1,15 @@
+.video-list {
+	display: flex;
+
+	column-gap: 20px;
+}
+
+.video-player {
+	border: 2px solid black;
+	width: 60%;
+	height: 400px;
+}
+.side-list {
+	border: 2px solid black;
+	width: 40%;
+}

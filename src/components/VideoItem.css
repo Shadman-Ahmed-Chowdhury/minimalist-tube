@@ -1,0 +1,19 @@
+.card {
+	width: 90%;
+	padding: 10px;
+	margin: 20px;
+	background-color: #ededed;
+	cursor: pointer;
+}
+.card-horizontal {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+h6 {
+	margin-top: auto;
+}
+
+img {
+	max-width: 180px;
+}
