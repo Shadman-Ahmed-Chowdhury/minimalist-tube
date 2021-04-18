@@ -1,0 +1,15 @@
+input[type="text"] {
+  background-color: #323232;
+  border: none;
+  outline: none;
+  width: 65%;
+  font-size: 20px;
+  color: #ffffff;
+  box-shadow: 8px 8px 8px 8px rgba(68, 66, 66, 0.26);
+}
+input[type="text"]:focus {
+  background-color: #383636;
+  border: 1px solid black;
+  color: #ffffff;
+  box-shadow: 8px 8px 8px 8px rgba(68, 66, 66, 0.26);
+}

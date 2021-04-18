@@ -6,7 +6,7 @@ const VideoDetail = ({ video }) => {
     return <div>Loading...</div>;
   }
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}?rel=0&autoplay=1`;
-  console.log(videoSrc);
+  //console.log(videoSrc);
   return (
     <div className="video-detail container">
       <div className="">
@@ -14,12 +14,10 @@ const VideoDetail = ({ video }) => {
           title="video player"
           height="315"
           src={videoSrc}
-          className=""
-          frameborder="0"
-          allowfullscreen="allowfullscreen"
+          allowFullScreen="allowFullScreen"
         ></iframe>
       </div>
-      <div className="video-detail-title">
+      <div className="video-detail-title mt-3">
         <h4>{video.snippet.title}</h4>
         <p>{video.snippet.description}</p>
       </div>

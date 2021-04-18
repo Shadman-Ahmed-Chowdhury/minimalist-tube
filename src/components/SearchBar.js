@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 
 class SearchBar extends React.Component {
   state = { term: "" };
@@ -18,11 +19,11 @@ class SearchBar extends React.Component {
       <div className="container">
         <form onSubmit={this.onFormSubmit}>
           <div className="form-group">
-            <label htmlFor="search">Video Search</label>
             <input
               type="text"
               className="form-control"
               name="search"
+              placeholder="Search YouTube Videos"
               value={this.state.term}
               onChange={this.onInputChange}
             />
