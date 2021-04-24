@@ -1,7 +1,13 @@
 import React from "react";
 import "./VideoItem.css";
+import DOMPurify from "dompurify";
 
 const VideoItem = ({ video, onVideoSelect }) => {
+  const createMarkup = (html) => {
+    return {
+      __html: DOMPurify.sanitize(html),
+    };
+  };
   return (
     <div className="video-item" onClick={() => onVideoSelect(video)}>
       <div className="card">
@@ -14,7 +20,10 @@ const VideoItem = ({ video, onVideoSelect }) => {
             />
           </div>
           <div className="card-body">
-            <h6 className="card-title">{video.snippet.title}</h6>
+            <h6
+              className="content"
+              dangerouslySetInnerHTML={createMarkup(video.snippet.title)}
+            ></h6>
             <h6>
               <span className="channel-name-sm">
                 {video.snippet.channelTitle}
