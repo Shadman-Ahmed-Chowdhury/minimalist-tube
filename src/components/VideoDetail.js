@@ -1,6 +1,7 @@
 import React from "react";
 import "./VideoDetail.css";
 import DOMPurify from "dompurify";
+import moment from "moment";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
@@ -13,6 +14,7 @@ const VideoDetail = ({ video }) => {
       __html: DOMPurify.sanitize(html),
     };
   };
+
   return (
     <div className="video-detail container">
       <div className="">
@@ -28,6 +30,7 @@ const VideoDetail = ({ video }) => {
           className="content"
           dangerouslySetInnerHTML={createMarkup(video.snippet.title)}
         ></h4>
+        <p>{moment(video.snippet.publishedAt).format("MMMM Do, YYYY")} </p>
         <h6>
           <span className="channel-name">{video.snippet.channelTitle}</span>
         </h6>
