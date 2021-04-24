@@ -4,3 +4,17 @@ iframe {
   box-shadow: 8px 8px 8px 8px rgba(68, 66, 66, 0.26);
   border: none;
 }
+
+.channel-name {
+  background-color: #222;
+  padding: 5px 20px;
+  border: #222;
+  box-shadow: 5px 5px 5px #333;
+  border-radius: 20px;
+}
+h6 {
+  margin-top: 15px;
+}
+p {
+  margin-top: 15px;
+}
