@@ -25,14 +25,12 @@ class App extends React.Component {
           videos: response.data.items,
           selectedVideo: response.data.items[0],
         });
-        //console.log(this.state.videos);
       })
       .catch((err) => {
         console.log(err);
       });
   };
   onVideoSelect = (video) => {
-    //console.log('From the App!', video.snippet.title);
     this.setState({ selectedVideo: video });
   };
   render() {

@@ -8,7 +8,6 @@ const VideoDetail = ({ video }) => {
     return <div>Loading...</div>;
   }
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}?rel=0&autoplay=1`;
-  //console.log(videoSrc);
   const createMarkup = (html) => {
     return {
       __html: DOMPurify.sanitize(html),
